@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import 'main.css';
+@import 'nav.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pacifico", cursive;
+}
+
+body{
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVENESS - Pazza-Pizza
+   Breakpoints: 1200px, 992px, 768px, 576px, 400px
+   These rules sit below the imports, so they override
+   nav.css and main.css on smaller screens.
+   Pages covered: index.html (herione-section) and
+   about.html (hero-section + story-section).
+   ========================================================== */
+ 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+ 
+img {
+    max-width: 100%;
+}
+ 
+/* Long words (like the email address in the footer) wrap instead of overflowing */
+footer p,
+.house > p,
+.story > p {
+    overflow-wrap: anywhere;
+}
+ 
+ 
+/* ---------- LARGE LAPTOPS (max 1200px) ---------- */
+@media (max-width: 1200px) {
+ 
+    /* The footer was a fixed 1140px wide - now it shrinks with the screen */
+    footer > .container {
+        width: 100%;
+        max-width: 1140px;
+        padding: 0 20px;
+    }
+}
+ 
+ 
+/* ---------- TABLETS (max 992px) ---------- */
+@media (max-width: 992px) {
+ 
+    /* Fixed backgrounds are jumpy on touch devices */
+    .hero-section > .section {
+        background-attachment: scroll;
+    }
+ 
+    /* NAV */
+    .herione-section > .nav-bar {
+        padding: 10px 20px;
+    }
+ 
+    .herione-section > .nav-bar > a > h1 {
+        font-size: 1.6rem;
+    }
+ 
+    .herione-section > .nav-bar > ul > li > a {
+        font-size: 1.05rem;
+    }
+ 
+    /* HERO (home page): auto height so nothing wraps sideways or gets cut off */
+    .herione-section > .secton {
+        height: auto;
+        min-height: 90vh;
+        flex-wrap: nowrap;
+        padding: 110px 25px 50px;
+        text-align: center;
+    }
+ 
+    .herione-section > .secton > h1 {
+        padding-top: 20px;
+        font-size: 2.1rem;
+    }
+ 
+    .herione-section > .secton > span {
+        font-size: 2.1rem;
+    }
+ 
+    .herione-section > .secton > p {
+        font-size: 1.2rem;
+        margin: 12px 0 22px;
+    }
+ 
+    .herione-section > .secton > p br {
+        display: none;
+    }
+ 
+    /* The 200px side spaces pushed the button and picture off-screen */
+    .herione-section > .secton > .button {
+        margin-right: 0;
+        padding: 2px 26px;
+        font-size: 1.5rem;
+    }
+ 
+    .herione-section > .secton > .img-section {
+        padding-left: 0;
+        padding-top: 25px;
+        text-align: center;
+    }
+ 
+    .herione-section > .secton > .img-section img {
+        max-width: 100%;
+        height: auto;
+    }
+ 
+
+   
+    /* CHEFS: no more fixed 400px height */
+    .chef-section {
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+ 
+    .chef-section > span {
+        display: inline-block;
+        padding: 4px 22px;
+        margin-bottom: 12px;
+        font-size: 1.6rem;
+    }
+ 
+    .chef-section > p {
+        font-size: 1.15rem;
+    }
+ 
+    .chef-section > p br,
+    .chef-section > .house-section > .house > p br {
+        display: none;
+    }
+ 
+    .chef-section > .house-section {
+        margin-top: 30px;
+        gap: 16px;
+        align-items: stretch;
+    }
+ 
+    .chef-section > .house-section > .house {
+        min-height: 0;
+        padding-bottom: 15px;
+    }
+ 
+    .chef-section > .house-section > .house > span {
+        font-size: 1.5rem;
+        padding: 10px 8px 0;
+    }
+ 
+    .chef-section > .house-section > .house > p {
+        padding: 6px 12px 0;
+    }
+ 
+    /* ABOUT page */
+    .hero-section > .section {
+        min-height: 45vh;
+        padding: 60px 20px;
+        text-align: center;
+    }
+ 
+    .hero-section > .section > span {
+        font-size: 2.1rem;
+    }
+ 
+    .hero-section > .section > p {
+        font-size: 1.4rem;
+    }
+ 
+    .story-section {
+        height: auto;
+        flex-direction: column;
+        padding: 60px 30px;
+        text-align: center;
+    }
+ 
+    .story-section > .story > span {
+        font-size: 2.4rem;
+    }
+ 
+    .story-section > .story > p {
+        font-size: 1.1rem;
+        margin-top: 14px;
+    }
+ 
+    .story-section > .story > p br {
+        display: none;
+    }
+ 
+    .story-section > .image {
+        padding-top: 30px;
+        text-align: center;
+    }
+ 
+    .story-section > .image > img {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+    }
+ 
+    /* FOOTER: wraps onto two rows. 300px of top space is no longer needed */
+    footer {
+        padding-top: 40px;
+    }
+ 
+    footer > .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+ 
+    footer > .container > .footer-container {
+        max-width: 45%;
+    }
+}
+ 
+ 
+/* ---------- PHONES (max 768px) ---------- */
+@media (max-width: 768px) {
+ 
+    /* NAV: logo left, hamburger right (the hamburger button comes from main.js) */
+    .herione-section > .nav-bar {
+        justify-content: space-between;
+    }
+ 
+    .herione-section > .nav-bar > a > h1 {
+        font-size: 1.3rem;
+    }
+ 
+    .herione-section > .nav-bar > ul > li {
+        padding: 12px;
+    }
+ 
+    .herione-section > .nav-bar > ul > li > a {
+        font-size: 1.1rem;
+    }
+ 
+    /* HERO */
+    .herione-section > .secton {
+        min-height: 85vh;
+        padding: 100px 20px 40px;
+    }
+ 
+    .herione-section > .secton > h1 {
+        font-size: 1.7rem;
+    }
+ 
+    .herione-section > .secton > span {
+        font-size: 1.9rem;
+    }
+ 
+    .herione-section > .secton > p {
+        font-size: 1.05rem;
+    }
+ 
+    .herione-section > .secton > .button {
+        font-size: 1.3rem;
+    }
+ 
+    .herione-section > .secton > .img-section img {
+        max-width: 360px;
+        width: 100%;
+    }
+ 
+    /* CHEFS: one card per row, stacked */
+    .chef-section {
+        padding: 45px 18px;
+    }
+ 
+    .chef-section > span {
+        font-size: 1.4rem;
+    }
+ 
+    .chef-section > p {
+        font-size: 1.05rem;
+    }
+ 
+    .chef-section > .house-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+ 
+    .chef-section > .house-section > .house {
+        flex: none;
+        width: 100%;
+        max-width: 420px;
+    }
+ 
+    .chef-section > .house-section > .house > img {
+        height: 230px;
+    }
+ 
+    .chef-section > .house-section > .house > span {
+        font-size: 1.6rem;
+    }
+ 
+    /* ABOUT page */
+    .hero-section > .section > span {
+        font-size: 1.8rem;
+    }
+ 
+    .hero-section > .section > p {
+        font-size: 1.15rem;
+    }
+ 
+    .story-section {
+        padding: 50px 20px;
+    }
+ 
+    .story-section > .story > span {
+        font-size: 2rem;
+    }
+ 
+    .story-section > .story > p {
+        font-size: 1rem;
+    }
+ 
+    /* FOOTER: single column, centred */
+    footer {
+        padding-top: 40px;
+        text-align: center;
+    }
+ 
+    footer > .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+ 
+    footer > .container > .footer-container {
+        max-width: 100%;
+        width: 100%;
+    }
+ 
+    footer > .container > .footer-container > h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+ 
+    .footer-container > .list > li {
+        text-align: center;
+    }
+ 
+    .footer-container > li {
+        justify-content: center;
+    }
+ 
+    .bottom-bar {
+        margin-top: 30px;
+    }
+ 
+    .bottom-bar > p {
+        font-size: 0.95rem;
+    }
+}
+ 
+ 
+/* ---------- SMALL PHONES (max 576px) ---------- */
+@media (max-width: 576px) {
+ 
+    .herione-section > .nav-bar > a > h1 {
+        font-size: 1.1rem;
+    }
+ 
+    .herione-section > .secton {
+        min-height: 80vh;
+    }
+ 
+    .herione-section > .secton > h1 {
+        font-size: 1.45rem;
+    }
+ 
+    .herione-section > .secton > span {
+        font-size: 1.65rem;
+    }
+ 
+    .herione-section > .secton > p {
+        font-size: 0.95rem;
+    }
+ 
+    .herione-section > .secton > .button {
+        font-size: 1.15rem;
+        padding: 2px 22px;
+    }
+ 
+    .chef-section > span {
+        font-size: 1.2rem;
+    }
+ 
+    .chef-section > .house-section > .house > span {
+        font-size: 1.4rem;
+    }
+ 
+    .chef-section > .house-section > .house > p {
+        font-size: 0.92rem;
+    }
+ 
+    .hero-section > .section > span {
+        font-size: 1.55rem;
+    }
+ 
+    .hero-section > .section > p {
+        font-size: 1rem;
+    }
+ 
+    .story-section > .story > span {
+        font-size: 1.7rem;
+    }
+ 
+    .story-section > .story > p {
+        font-size: 0.95rem;
+    }
+ 
+    footer > .container > .footer-container > h3 {
+        font-size: 21px;
+    }
+}
+ 
+ 
+/* ---------- VERY SMALL PHONES (max 400px) ---------- */
+@media (max-width: 400px) {
+ 
+    .herione-section > .nav-bar {
+        padding: 10px 12px;
+    }
+ 
+    .herione-section > .nav-bar > a > h1 {
+        font-size: 1rem;
+    }
+ 
+    .herione-section > .secton {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+ 
+    .herione-section > .secton > h1 {
+        font-size: 1.25rem;
+    }
+ 
+    .herione-section > .secton > span {
+        font-size: 1.45rem;
+    }
+ 
+    .chef-section,
+    .story-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+ 
+    .bottom-bar > p {
+        font-size: 0.85rem;
+    }
+}
+ 
+ 
+/* ---------- PHONES IN LANDSCAPE ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+ 
+    .herione-section > .secton {
+        min-height: 100vh;
+        padding-top: 90px;
+    }
+ 
+    .hero-section > .section {
+        min-height: 0;
+    }
+}
+ 
+ 
+/* ---------- TOUCH DEVICES: no hover-only effects ---------- */
+@media (hover: none) {
+ 
+    .herione-section > .secton > .img-section:hover {
+        transform: none;
+    }
+ 
+    /* main.js adds a glow and zoom on hover; on touch screens it would stay stuck after a tap */
+    .chef-section > .house-section > .house {
+        box-shadow: none !important;
+    }
+ 
+    .chef-section > .house-section > .house > img {
+        transform: none !important;
+    }
+}
+ 
+ 
+/* ---------- VERY LARGE SCREENS (min 1600px) ---------- */
+@media (min-width: 1600px) {
+ 
+    .herione-section > .secton > h1,
+    .herione-section > .secton > span {
+        font-size: 3.4rem;
+    }
+ 
+    .herione-section > .secton > p {
+        font-size: 1.7rem;
+    }
+ 
+    footer > .container {
+        max-width: 1300px;
+    }
+}
+ 
+ 
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+ 
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+ 

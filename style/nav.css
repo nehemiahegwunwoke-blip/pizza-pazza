@@ -1,0 +1,113 @@
+.herione-section > .nav-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.herione-section  > .nav-bar > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.herione-section > .nav-bar > ul > li{
+    display: inline-flex;
+    list-style: none;
+    padding: 8px 12px;
+}
+
+.herione-section > .nav-bar > ul > li >  a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.heroine-section > .nav-bar > ul > li a ::after{
+     content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f18930;
+    transition: 0.5s;
+    display: block;
+    cursor: pointer;
+    margin: 20px;
+}
+.heroine-section > .nav-bar > ul > li a:hover::after{
+    color: #e607;
+    width: 30%;
+}
+
+.herione-section > .nav-bar > ul > li > a:hover{
+    color: #e607;
+}
+
+.herione-section > .nav-bar>.account >ul > a >li{
+    color: beige;
+    display: inline-flex;
+    
+}
+
+/* right side: search + home */
+.account {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.account a {
+  color: beige;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 4px 6px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.search-box.open {
+  border-color: #f18930;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-box input {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  transition: width 0.4s, opacity 0.4s, padding 0.4s;
+}
+
+.search-box.open input {
+  width: 200px;
+  opacity: 1;
+  padding: 6px 10px;
+}
+
+.search-box input::placeholder {
+  color: #ccc;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: beige;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  color: #f18930;
+}

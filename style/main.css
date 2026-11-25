@@ -1,0 +1,299 @@
+.herione-section > .secton{
+    width: 100%;
+   height: 90vh;
+    display: flex;
+    padding-top: 50px;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 1000;
+    background-image: linear-gradient(rgba(0,0,0,0.75) 0%,
+                                rgba(0,0,0,0.5) 50%,
+                                rgba(0,0,0,0.85) 100%), url(../asset/img/Chef_changing.gif);
+                                background-position: fixed;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+    transition: all 0.3s ease-in;
+    flex: 1;
+}
+
+.herione-section >.secton > h1{
+    padding-top: 70px;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.herione-section >.secton > span{
+    color: chocolate;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.herione-section > .secton > p{
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.herione-section > .secton > .img-section{
+
+width: 100%;  
+padding-left: 200px;
+padding-top: 10px;
+cursor: pointer;
+}
+
+.herione-section > .secton > .img-section:hover{
+transform: scale(0.9);
+}
+.herione-section > .secton > .button{
+    font-size: 2rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    background-color: chocolate;
+    margin-right: 200px;
+}
+
+.chef-section{
+    width: 100%;
+    background-color: #fff;
+    height: 400px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.chef-section > span{
+    font-size: 1.9rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: gold;
+}
+
+.chef-section > p{
+    font-size: 1.4rem;
+}
+
+ .house-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.chef-section > .house-section > .house{
+    width: 100%;
+    min-height: 350px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: black;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.chef-section > .house-section >.house > span{
+        font-size: 2.2rem;
+        display: block;
+        color: #fff;
+}
+
+.chef-section > .house-section > .house > p{
+    font-size: 1rem;
+    color: #fff;
+}
+ .chef-section > .house-section > .house > img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+ }
+
+ footer{
+    background: #fff;
+    padding-top: 300px;
+}
+footer > .container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .container > .footer-container{
+    width: 100%;
+    max-width: 300px;
+}
+
+footer > .container > .footer-container > h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+footer > .container > .footer-container > p{
+    margin: auto;
+    padding: 7px;
+}
+
+.footer-container > ul{
+text-align: center;
+}
+
+.footer-container > .list{
+    display: block;
+    padding: 0;
+    color: black;
+}
+
+.footer-container > .list > li{
+    width: auto;
+    text-align: left;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+
+.container >.footer-container > li > a > i{
+    color: #f18930;
+}
+
+.footer-container > .list >li > a:hover{
+    color: #f18930;
+}
+
+.footer-container > .list > li > a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f18930;
+    transition: 0.5s;
+    display: block;
+    cursor: pointer;
+}
+
+.footer-container > .list >li > a:hover::after{
+    background: #f18930;
+    width: 30%;
+}
+
+.footer-container > li{
+    color: #000;
+    text-align: center;
+    display: inline-flex;
+    padding: 5px;
+}
+
+.footer-container > li > a{
+    text-align: center;
+    padding: 0;
+}
+
+.footer-container > li > a > i{
+color: black;
+font-size: 25px;
+}
+
+.footer-container > li > a:hover{
+    color: gold;
+}
+
+.footer-container > li > a > i:hover{
+    color: gold;
+    cursor: pointer;
+}
+
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar > p{
+    color: #fff;
+    margin: 0;
+    padding: 7px;
+    font-size: 1.1rem;
+}
+
+.hero-section > .section {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.55) 45%,
+            rgba(0, 0, 0, 0.20) 100%), url(../asset/img/hero.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            min-height: 40vh;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+}
+
+.hero-section > .section > span {
+font-size: 2.5rem;
+color: #f18930;
+font-weight: bolder;
+}
+
+.hero-section > .section > p{
+    font-size: 1.7rem;
+    color: white;
+}
+
+.story-section {
+width: 100%;
+height: 400px;
+background-color: rgb(33, 32, 32);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 3px;
+}
+
+.story-section > .story {
+width: 100%;
+display: block;
+}
+
+.story-section > .story > span{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.story-section > .story > p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.story > img{
+    display: flex;
+    object-fit: cover;
+    width: 500px;
+    border: 2px solid blue;
+    align-items: center;
+}
+
+.story-section > .image{
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.story-section > .image > img{
+width: 500px;
+flex-wrap: wrap;
+object-fit: cover;
+border: 2px solid;
+border-radius: 800%;
+}
+
+
+ 
